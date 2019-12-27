@@ -1,6 +1,6 @@
 # OpenCv sample cpp with Conan
 
-This is a sample project explaining how to use conan in a cpp with an external library such as openCv
+This is a sample project explaining how to use conan in a cpp with an external library such as openCv.
 
 ## Requirements
 
@@ -11,7 +11,7 @@ This is a sample project explaining how to use conan in a cpp with an external l
 
 ## Ho to test this project
 
-- To install prerequies
+#### First, To install pre-requirements
 
 Just run: `sh ./install.sh`
 What is done behind the scene:
@@ -20,7 +20,9 @@ What is done behind the scene:
 pip install conan
 ```
 
-- Second you need to configure your `conanfile.txt` like this sample:
+#### Second, you need to configure your `conanfile.txt` like this sample:
+
+Sample content :
 
 ```txt
 [requires]
@@ -33,8 +35,9 @@ cmake
 you can also do a `conan search your-lib -remote=conan-center` and then select in the list what you want to use
 
 
-- Third, add to your `CMakeLists.txt`, conan-packages as follow:
+#### Third, add to your `CMakeLists.txt`, conan-packages as follow:
 
+The content of the file :
 ```txt
 cmake_minimum_required(VERSION 2.8.12)
 project(OpencvCam)
@@ -51,7 +54,10 @@ target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 Now, we are set-up and we can build our sample app for streaming the camera of our laptop : 
 
 
-- Four, we check up our code :
+#### Four, we check up our code :
+
+
+Sample code for openCv:
 
 ```cpp
 #include <iostream>
@@ -87,7 +93,7 @@ int main(int, char**)
 }
 ```
 
-- Five, we can now build it
+#### Five, we can now build it
 
 Just run: `sh ./build.sh`
 What is done behind the scene:
@@ -102,8 +108,8 @@ cmake --build .
 
 Some files will be added in `./build` + the portable of our application in `./build/bin` :-)
 
-.
-- Six, we can run our application :
+
+#### Six, we can run our application :
 
 Just run: `sh ./start.sh`
 What is done behind the scene:
@@ -113,11 +119,15 @@ What is done behind the scene:
 ```
 
 
-- Seven, or you can do all theese steps by running `sh ./install_build_start.sh`
+#### Seven, or you can do all theese steps
+
+Just run `sh ./install_build_start.sh`
 What is done behind the scene:
 
 ```shell
-
+sh ./install.sh
+sh ./build.sh
+sh ./start.sh
 ```
 
 ## Author
