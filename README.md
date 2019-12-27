@@ -1,4 +1,4 @@
-# OpenCv sample cpp with Conan
+# OpenCvCpp with Conan
 
 This is a sample project explaining how to use conan in a cpp with an external library such as openCv.
 
