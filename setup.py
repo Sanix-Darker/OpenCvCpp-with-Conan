@@ -9,15 +9,15 @@ from setuptools import setup, Distribution
 
 
 class BinaryDistribution(Distribution):
-    def has_ext_modules(opencv_lib):
+    def has_ext_modules(opcv):
         return True
 
 setup(
-    name='opencv_lib',
+    name='opcv',
     version='1.0',
-    description='opencv_lib Library',
+    description='opcv Library',
     package_data={
-        'opencv_lib': ['./build/lib/opencv_lib.so'],
+        'opcv': ['./build/lib/opcv.so'],
     },
     distclass=BinaryDistribution
 )

@@ -1,8 +1,11 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(opencv_lib)
+project(opcv)
 
 add_definitions("-std=c++11")
+
+
+set(PYTHON_EXECUTABLE "/usr/bin/python3.7")
 
 find_package(Boost COMPONENTS python37 REQUIRED)
 find_package(PythonInterp 3.7)

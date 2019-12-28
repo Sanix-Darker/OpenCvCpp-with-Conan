@@ -1,7 +1,11 @@
-import sys
-sys.path.insert(0,'./build/lib/')
+# import sys
+# sys.path.insert(0,'./build/lib/')
 
-from opencv_lib import *
+from opcv import printt
 
-print("Test !!!")
-#testFunction()
+print(printt("AMAZING !!!"))
+
+
+# import foo
+
+# print(foo(3))

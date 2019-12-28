@@ -1,1 +1,1 @@
-include ./build/lib/opencv_lib.so
+include ./build/lib/opcv.so
