@@ -1,2 +1,7 @@
 CMakeLists.txt.user
 build
+dist
+*.egg-info
+.vscode
+*__pycache__
+.history
