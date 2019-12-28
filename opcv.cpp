@@ -1,4 +1,3 @@
-
 #include "opcv.hpp" 
 
 void printt(std::string strr)
@@ -7,7 +6,7 @@ void printt(std::string strr)
     std::cout << "You said : " << strr;
 }
 
-int test()
+int test_cam()
 {
     // Open default camera
     cv::VideoCapture cap(0);
