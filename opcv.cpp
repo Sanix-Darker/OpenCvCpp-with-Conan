@@ -1,25 +1,11 @@
 
-#include <iostream>
 #include "opcv.hpp" 
 
-#include <opencv2/opencv.hpp>
-
-void startLoop(cv::VideoCapture cap, cv::Mat frame)
+void printt(std::string strr)
 {
-
-    while(1)
-    {
-        // Get a new frame from camera
-        cap >> frame;
-
-        // Show the frame
-        cv::imshow("video", frame);
-
-        // Exit
-        if(cv::waitKey(30) >= 0) break;
-    }
+    std::cout << "Working Fine!" << std::endl;
+    std::cout << "You said : " << strr;
 }
-
 
 int test()
 {
@@ -40,8 +26,18 @@ int test()
     return 0;
 }
 
-void printt(std::string strr)
+void startLoop(cv::VideoCapture cap, cv::Mat frame)
 {
-    std::cout << "Working Fine!" << std::endl;
-    std::cout << "You said : " << strr;
+
+    while(1)
+    {
+        // Get a new frame from camera
+        cap >> frame;
+
+        // Show the frame
+        cv::imshow("video", frame);
+
+        // Exit
+        if(cv::waitKey(30) >= 0) break;
+    }
 }

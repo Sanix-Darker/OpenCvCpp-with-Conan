@@ -3,10 +3,6 @@ cmake_minimum_required(VERSION 3.12)
 project(opcv)
 
 add_definitions("-std=c++11")
-
-
-set(PYTHON_EXECUTABLE "/usr/bin/python3.7")
-
 find_package(Boost COMPONENTS python37 REQUIRED)
 find_package(PythonInterp 3.7)
 find_package(PythonLibs 3.7)
@@ -16,13 +12,14 @@ conan_basic_setup()
 
 add_library(${PROJECT_NAME} 
     SHARED
-    module.cpp)
+    module.cpp
+    opcv.cpp)
 
-# file(
-#   GLOB
-#   headers
-#   *.hpp
-# )
+file(
+  GLOB
+  headers
+  *.hpp
+)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES} ${PYTHON_LIBRARIES} ${CONAN_LIBS})

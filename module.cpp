@@ -3,15 +3,7 @@
 // #include <boost/python/scope.hpp>
 
 #include <boost/python.hpp>
-#include <iostream>
-
-
-void printt(std::string strr)
-{
-    std::cout << "Working Fine!" << std::endl;
-    std::cout << "You said : " << strr;
-}
-
+#include "opcv.hpp"
 
 BOOST_PYTHON_MODULE(opcv)
 {
