@@ -25,6 +25,12 @@ int test_cam()
     return 0;
 }
 
+
+int main()
+{
+    test_cam();
+}
+
 void startLoop(cv::VideoCapture cap, cv::Mat frame)
 {
 

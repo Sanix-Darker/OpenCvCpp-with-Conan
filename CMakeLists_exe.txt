@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.12)
+
+project(opcv)
+
+add_definitions("-std=c++11")
+find_package(Boost COMPONENTS python37 REQUIRED)
+find_package(PythonInterp 3.7)
+find_package(PythonLibs 3.7)
+
+include("./build/conanbuildinfo.cmake")
+conan_basic_setup()
+
+# To build an eecutable
+add_executable(${PROJECT_NAME} opcv.cpp)
+target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+
+message("install ${Python_SITELIB}")
