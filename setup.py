@@ -21,3 +21,10 @@ setup(
     },
     distclass=BinaryDistribution
 )
+
+# Add this parameter for addionals directory of externals files
+# in setup.py
+# data_files=[(
+#         "dir1",
+#         ["additionalstuff/moredata.txt", "INFO.txt"]
+# )],
