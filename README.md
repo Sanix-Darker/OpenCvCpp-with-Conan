@@ -33,7 +33,7 @@ opencv/2.4.13.5@conan/stable
 cmake
 ```
 
-you can also do a `conan search your-lib -remote=conan-center` and then select in the list what you want to use
+you can also do a `conan search your-lib --remote=conan-center` and then select in the list what you want to use
 
 
 #### 3- Config your `CMakeLists.txt`, conan-packages as follow:
